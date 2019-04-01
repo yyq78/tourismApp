@@ -6,8 +6,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 //css
-import './assets/css/reset.css'
-import './assets/css/iconfont.css'
+import 'css/reset.css'
+import 'css/iconfont.css'
 //js
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
