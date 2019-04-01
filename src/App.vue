@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    home
-    <i class="iconfont">&#xe632;</i>
+    <router-view></router-view>
   </div>
 </template>
 
