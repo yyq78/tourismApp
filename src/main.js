@@ -10,6 +10,10 @@ import 'css/reset.css'
 import 'css/iconfont.css'
 //js
 import FastClick from 'fastclick'
+//swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 FastClick.attach(document.body);
 /* eslint-disable no-new */
 new Vue({

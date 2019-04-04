@@ -1,20 +1,20 @@
 <template>
   <div class="header">
-      <div class="header-left">
-        <span class='iconfont'>&#xe600;</span>
-      </div>
-      <div class="header-search">
-        <span class='iconfont'>&#xe632;</span>
-        输入城市/景点/游玩主题
-      </div>
-      <div class="header-right">
-        成都<span class='iconfont'>&#xe607;</span>
-      </div>
+    <div class="header-left">
+      <span class='iconfont'>&#xe600;</span>
+    </div>
+    <div class="header-search">
+      <span class='iconfont'>&#xe632;</span> 输入城市/景点/游玩主题
+    </div>
+    <div class="header-right">
+      成都<span class='iconfont'>&#xe607;</span>
+    </div>
   </div>
 </template>
 <script>
+
 </script>
-<style scoped lang='stylus'>
+<style lang='stylus' scoped>
 @import '~css/var.styl';
 
   .header{
