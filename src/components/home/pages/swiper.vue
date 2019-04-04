@@ -1,7 +1,7 @@
 <template>
   <div class="header-swiper">
     <swiper :options="swiperOption">
-        <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
+        <swiper-slide v-for="(slide, index) in swiperList" :key="index">
             <img :src="slide.imgSrc" alt="slide.alt">
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -19,7 +19,7 @@
             loop:true,
             autoplay:true
           },
-          swiperSlides: [
+          swiperList: [
             {
               imgSrc:require("@/assets/img/swiper1.jpg"),
               alt:'去哪儿门票'
@@ -46,7 +46,6 @@
   }
   .header-swiper img{
     width:100%;
-    height:100%;
   }
  .header-swiper >>> .swiper-pagination-bullet-active{
    background:#fff;
