@@ -16,11 +16,8 @@
 					<img :src="page.imgUrl">
 					<p>{{page.title}}</p>
 				</div>
-
+        
 			</swiper-slide>
-
-      <div class="swiper-pagination" slot="pagination"></div>
-
 		</swiper>
 
 	</div>
@@ -109,7 +106,9 @@ export default{
 @import '~css/common.styl';
   .icons{
     width:100%;
-    overflow:hidden;
+    height:30%;
+    background:#fff;
+    padding-bottom:.4rem;
   }
   .icons-item{
     width:25%;
@@ -131,4 +130,6 @@ export default{
       color:#212121;
       textOverflow();
   }
+
+
 </style>

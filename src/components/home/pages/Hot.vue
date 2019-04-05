@@ -77,6 +77,7 @@
   .hot{
     margin-top:.2rem;
     font-size:.28rem;
+    background-color:#fff;
   }
   .hot .hot-top{
     padding:.2rem;

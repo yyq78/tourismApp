@@ -5,6 +5,7 @@
       <home-icon></home-icon>
       <home-location></home-location>
       <home-hot></home-hot>
+      <home-like></home-like>
   </div>
 </template>
 <script>
@@ -13,6 +14,7 @@ import HomeSwiper from './pages/Swiper'
 import HomeIcon from './pages/Icon'
 import HomeLocation from './pages/Location'
 import HomeHot from './pages/Hot'
+import HomeLike from './pages/Like'
 
 export default{
   components:{
@@ -20,7 +22,8 @@ export default{
     HomeSwiper,
     HomeIcon,
     HomeLocation,
-    HomeHot
+    HomeHot,
+    HomeLike
   }
 }
 </script>

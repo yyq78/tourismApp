@@ -20,6 +20,7 @@
   .location{
     display:flex;
     position:relative;
+    background: #fff;
   }
   .location .location-item{
     flex:1;
