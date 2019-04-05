@@ -14,7 +14,12 @@ import FastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
+//axios
+import axios from 'axios'
+Vue.prototype.$http=axios
+
 FastClick.attach(document.body);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

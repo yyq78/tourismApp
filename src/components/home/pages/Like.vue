@@ -42,51 +42,10 @@
 
 <script>
   export default {
+     props:['likeList'],
     data() {
       return {
-        likeList: [
-          {
-            id: "01",
-            imgUrl: "http://img1.qunarzz.com/sight/p0/1809/1f/1f39774291457a42a3.img.jpg_200x200_e2d8001d.jpg",
-            title: "石象湖",
-            msg: "3500",
-            price: "80",
-            map: "浦江县"
-          },
-          {
-            id: "02",
-            imgUrl: "http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg",
-            title: "成都海昌极地公园",
-            msg: "33425",
-            price: "198",
-            map: "双流县"
-          },
-          {
-            id: "03",
-            imgUrl: "http://img1.qunarzz.com/sight/p0/1706/c4/c4b6c51a2ac942cfa3.img.jpg_200x200_2805e881.jpg",
-            title: "花舞人间",
-            msg: "3585",
-            price: "89",
-            map: "新津县"
-          },
-          {
-            id: "04",
-            imgUrl: "http://img1.qunarzz.com/sight/p0/1512/3a/3ab83c0358208e8d90.img.jpg_200x200_14e2fbfd.jpg",
-            title: "花水湾四季温泉谷",
-            msg: "389",
-            price: "139",
-            map: "花水湾四季温泉谷"
-          },
-          {
-            id: "05",
-            imgUrl: "http://img1.qunarzz.com/sight/p0/201309/24/977fea7b3c5cd758c8d65eac.jpg_200x200_697c3b3f.jpg",
-            title: "成都大熊猫繁育研究基地",
-            msg: "133245",
-            price: "19.8",
-            map: "成华区"
-          }
-
-        ]
+      
       }
     }
   }

@@ -25,62 +25,12 @@
 
 <script>
 export default{
+   props:['iconsList'],
       data(){
         return {
           swiperOption: {
-          },
-          iconsList: [
-            {
-              id:"01",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-              title:"景点门票"
-            },
-           {
-              id:"02",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-              title:"一日游"
-            },
-           {
-              id:"03",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-              title:"成都必游"
-            },
-            {
-              id:"04",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
-              title:"川剧变脸"
-            },
-            {
-              id:"05",
-              imgUrl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
-              title:"自然风光"
-            },
-              {
-              id:"06",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-              title:"亲子游"
-            },
-           {
-              id:"07",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
-              title:"游乐场"
-            },
-           {
-              id:"08",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png",
-              title:"熊猫基地"
-            },
-            {
-              id:"09",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-              title:"动植物园"
-            },
-            {
-              id:"10",
-              imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
-              title:"成都赏花"
-            }
-          ]
+          }
+         
         }
        
       },

@@ -10,6 +10,7 @@
 </template>
 <script>
     export default{
+      props:['swiperList'],
       data(){
         return {
           swiperOption: {
@@ -18,21 +19,8 @@
             },
             loop:true,
             autoplay:true
-          },
-          swiperList: [
-            {
-              imgSrc:require("@/assets/img/swiper1.jpg"),
-              alt:'去哪儿门票'
-            },
-            {
-              imgSrc:require("@/assets/img/swiper2.jpg"),
-              alt:'去哪儿门票'
-            },
-            {
-              imgSrc:require("@/assets/img/swiper3.jpg"),
-              alt:'去哪儿门票'
-            }
-          ]
+          }
+          
         }
       }
     }
