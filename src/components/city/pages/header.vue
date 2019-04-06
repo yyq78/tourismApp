@@ -25,7 +25,7 @@
     line-height:.88rem;
     background-color: $bgcolor;
     color:$textcolor;
-    font-size:.36rem;
+    font-size:.32rem;
     position:relative;
   }
   .header-left{
@@ -35,8 +35,8 @@
     font-weight:bold;
     position:absolute;
   }
-.header-title{
-  text-align:center;
- 
-}
+  .header-title{
+    text-align:center;
+  
+  }
 </style>
