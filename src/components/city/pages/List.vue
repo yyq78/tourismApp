@@ -42,12 +42,12 @@ export default {
   props:["hotCities","cities"],
   data(){
     return {
-      scroll:{}
+      scroll:''
     }
   },
   methods: {
     changeSort(sortName){
-      
+      this.scroll.scrollToElement(this.$refs[sortName][0]);
     }
   },
   mounted() {
