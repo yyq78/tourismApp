@@ -58,6 +58,14 @@ export default {
 </script>
 
 <style>
+  .wrapper{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:.88rem;
+    overflow:hidden;
+  }
   .item-title{
     font-size:.24rem;
     padding:.2rem;
