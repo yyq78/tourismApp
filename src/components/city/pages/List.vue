@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" ref="container">
     <div class="content">
       <!--hot-->
       <div class="hot">
@@ -7,7 +7,7 @@
           热门城市
         </div>
         <ul class="hot-list">
-          <li class="hot-item" v-for="item in hotCities" :key=item.id>
+          <li class="hot-item" v-for="item in hotCities" :key=item.id @click="changeCityName(item.name)">
             {{item.name}}
           </li>
         </ul>
@@ -47,13 +47,17 @@ export default {
   },
   methods: {
     changeSort(sortName){
-      this.scroll.scrollToElement(this.$refs[sortName][0]);
+      var dom=this.$refs[sortName][0];
+      this.scroll.scrollToElement(dom);
+    },
+    changeCityName(cityName){
+      console.log(cityName);
     }
   },
   mounted() {
-    let wrapper = document.querySelector('.wrapper')
+    let wrapper =this.$refs['container'];
     this.scroll = new BScroll(wrapper);
-  },
+  }
 }
 </script>
 
@@ -62,10 +66,54 @@ export default {
     position:absolute;
     left:0;
     right:0;
-    bottom:0;
+    bottom:.88rem;
     top:.88rem;
     overflow:hidden;
   }
+  .hot-top{
+    font-size:.24rem;
+    padding:.2rem;
+  }
+  .hot-list{
+    overflow:hidden;
+    position:relative;
+   
+  }
+
+  .hot-list:before{
+    content:" ";
+    position:absolute;
+    left:33.33%;
+    width:33.33%;
+    height:100%;
+    border-right:.02rem solid #ddd;
+    border-left:.02rem solid #ddd;
+  }
+  .hot-list li{
+    position:relative;
+    float:left;
+    width:33.33%;
+    font-size:.28rem;
+    line-height:.9rem;
+    text-align: center;
+    border-bottom: .02rem solid #ddd;
+    margin-bottom:-1px;
+  }
+ .sort-top{
+    font-size:.24rem;
+    padding:.2rem;
+  }
+  .sort-list{
+    overflow:hidden; 
+  }
+  .sort-list li{
+    float:left;
+    width:16.66%;
+    font-size:.28rem;
+    line-height:.9rem;
+    text-align: center;
+  }
+
   .item-title{
     font-size:.24rem;
     padding:.2rem;
@@ -100,18 +148,5 @@ export default {
     height:100%;
     border-left:.02rem solid #ddd;
   }
-  .sort-top{
-    font-size:.24rem;
-    padding:.2rem;
-  }
-  .sort-list{
-    overflow:hidden; 
-  }
-  .sort-list li{
-    float:left;
-    width:16.66%;
-    font-size:.28rem;
-    line-height:.9rem;
-    text-align: center;
-  }
+ 
 </style>
