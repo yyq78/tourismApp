@@ -7,7 +7,7 @@
           热门城市
         </div>
         <ul class="hot-list">
-          <li class="hot-item" v-for="item in hotCities" :key=item.id @click="changeCityName(item.name)">
+          <li class="hot-item" v-for="item in hotCities" :key=item.id @click="changeCity(item.name)">
             {{item.name}}
           </li>
         </ul>
@@ -26,7 +26,7 @@
         <div v-for="(val,key) in cities" :ref="key">
           <div class="item-title">{{key}}</div>
           <ul class="item-msg">
-            <li v-for="item in val" :key=item.id>{{item.name}}</li>
+            <li v-for="item in val" :key=item.id @click="changeCity(item.name)">{{item.name}}</li>
           </ul>
         </div>
       </div>
@@ -37,7 +37,7 @@
 
 <script>
 import BScroll from 'better-scroll';
-
+import {mapMutations} from 'vuex'
 export default {
   props:["hotCities","cities"],
   data(){
@@ -46,13 +46,17 @@ export default {
     }
   },
   methods: {
+    changeCityName(){},
     changeSort(sortName){
       var dom=this.$refs[sortName][0];
       this.scroll.scrollToElement(dom);
     },
-    changeCityName(cityName){
-      console.log(cityName);
-    }
+    changeCity(cityName){
+      this.$store.commit('changeCityName',cityName);
+      // changeCityName(state,cityName);
+      this.$router.push('/');
+    },
+    // ...mapMutations(['changeCityName'])
   },
   mounted() {
     let wrapper =this.$refs['container'];
@@ -123,6 +127,7 @@ export default {
     position:relative;
   }
   .item-msg li{
+    position:relative;
     float:left;
     width:25%;
     font-size:.28rem;
@@ -143,8 +148,8 @@ export default {
   .item-msg:after{
     content:" ";
     position:absolute;
-    right:25%;
-    width:25%;
+    right:50%;
+    width:0;
     height:100%;
     border-left:.02rem solid #ddd;
   }

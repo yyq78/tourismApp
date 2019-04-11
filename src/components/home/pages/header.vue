@@ -15,10 +15,12 @@
 </template>
 <script>
   import {mapState} from 'vuex'
+
   export default {
       computed: {
-        ...mapState(['city'])
+          ...mapState(['city'])
       }
+      
   }
 </script>
 <style lang='stylus' scoped>
