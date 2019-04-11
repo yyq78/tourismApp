@@ -52,11 +52,11 @@ export default {
       this.scroll.scrollToElement(dom);
     },
     changeCity(cityName){
-      this.$store.commit('changeCityName',cityName);
-      // changeCityName(state,cityName);
+      // this.$store.commit('changeCityName',cityName);
+      this.changeCityName(cityName);
       this.$router.push('/');
     },
-    // ...mapMutations(['changeCityName'])
+    ...mapMutations(['changeCityName'])
   },
   mounted() {
     let wrapper =this.$refs['container'];
