@@ -46,7 +46,6 @@ export default {
     }
   },
   methods: {
-    changeCityName(){},
     changeSort(sortName){
       var dom=this.$refs[sortName][0];
       this.scroll.scrollToElement(dom);
