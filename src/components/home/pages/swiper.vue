@@ -18,7 +18,8 @@
               el: '.swiper-pagination'
             },
             loop:true,
-            autoplay:true
+            autoplay:true,
+            observer:true
           }
           
         }
@@ -31,6 +32,7 @@
     width:100%;
     height:0;
     padding-bottom:26.67%;
+    position:relative;
   }
   .header-swiper img{
     width:100%;
