@@ -34,7 +34,8 @@ export default{
       iconsList:[],
       hotList:[],
       likeList:[],
-      vacationList:[]
+      vacationList:[],
+      changeCity:''
     }
   },
   computed: {
@@ -46,22 +47,41 @@ export default{
           .then((res)=>
               {
                 const data=res.data.data;
-                data.forEach((item,index)=>{
-                  if(item.city==this.city){
-                    this.swiperList=item.swiperList;
-                    this.iconsList=item.iconsList;
-                    this.hotList=item.hotList;
-                    this.likeList=item.likeList;
-                    this.vacationList=item.vacationList;
-                  }
-                })
+                if(data.some((item)=>item.city==this.city)){
+                  data.forEach((item,index)=>{
+                    if(item.city==this.city){
+                      this.swiperList=item.swiperList;
+                      this.iconsList=item.iconsList;
+                      this.hotList=item.hotList;
+                      this.likeList=item.likeList;
+                      this.vacationList=item.vacationList;
+
+                    }
+                  })
+                }
+                else{
+                      this.swiperList=[];
+                      this.iconsList=[];
+                      this.hotList=[];
+                      this.likeList=[];
+                      this.vacationList=[];
+                }
+               
+
               
               }
           )
      }
   },
   mounted(){
+    this.changeCity=this.city;
     this.getHttp();
+  },
+  activated() {
+     if(this.changeCity!==this.city){
+      this.getHttp();
+      this.changeCity=this.city;
+    }
   }
 }
 </script>
