@@ -45,6 +45,9 @@ export default {
         that.showHeader=true;
       }
     })
+  },
+  activated() {
+    document.documentElement.scrollTop=0;
   }
 }
 </script>
