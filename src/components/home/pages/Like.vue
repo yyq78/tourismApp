@@ -10,7 +10,7 @@
 
     <ul class="like-list">
 
-      <li class="like-item  border-bottom" v-for="item in likeList" :key="item.id">
+      <li class="like-item  border-bottom" v-for="item in likeList" :key="item.id" @click='toDetail'>
 
         <div class="like-img">
           <img :src="item.imgUrl" alt="item.title" />
@@ -42,10 +42,10 @@
 
 <script>
   export default {
-     props:['likeList'],
-    data() {
-      return {
-      
+    props:['likeList'],
+    methods:{
+      toDetail(){
+        this.$router.push('/detail');
       }
     }
   }
