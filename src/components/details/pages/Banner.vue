@@ -11,7 +11,7 @@
         <div class="banner-gallery"  v-show='imgSwiper' @click='hideSwiper'>
             <swiper :options="swiperOption">
                 <swiper-slide v-for="(slide, index) in bannerList" :key="index">
-                    <img :src="slide.imgUrl">
+                    <img :src="slide.imgUrl"/>
                 </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>  
@@ -59,6 +59,9 @@ export default {
 }
 </script>
 <style scoped>
+  .banner{
+        overflow:hidden;
+   }
   .banner-img{
       position:relative;
       width:100%;
@@ -87,7 +90,7 @@ export default {
       display:flex;
       justify-content: center;
       align-items: center;
-      overflow:hidden;
+     
   }
   .banner-gallery img{
       width:100%;

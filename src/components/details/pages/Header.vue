@@ -1,15 +1,23 @@
 <template>
   <div class="header">
+
     <div class="header-return" @click='toHome' v-show='showHeader'>
+
       <span class="iconfont">&#xe600;</span>
+
     </div>
+
+
     <div class="header-top"  v-show='!showHeader' :style='styleOpacity'>
+      
       <div class="header-left" @click='toHome'>
         <span class='iconfont'>&#xe600;</span>
       </div>
+      
       <div class="header-title">
         石象湖
       </div>
+    
     </div>
     
   </div>
@@ -33,7 +41,7 @@ export default {
   mounted() {
     let that=this;
     window.addEventListener("scroll",function(){
-      let top=document.documentElement.scrollTop;
+      let top=document.body.scrollTop||document.documentElement.scrollTop;
      
       if(top>40){
         let opacity=top/200;
@@ -46,9 +54,7 @@ export default {
       }
     })
   },
-  activated() {
-    document.documentElement.scrollTop=0;
-  }
+
 }
 </script>
 <style scoped lang='stylus'> 
@@ -59,7 +65,7 @@ export default {
     background-color: $bgcolor;
     color:$textcolor;
     font-size:.32rem;
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
   }
@@ -85,7 +91,7 @@ export default {
     background-color: $bgcolor;
     color:$textcolor;
     font-size:.32rem;
-    position:absolute;
+    position:fixed;
     z-index:99;
   }
   .header-left{

@@ -24,7 +24,7 @@
   }
 </script>
 <style lang='stylus' scoped>
-@import '~css/var.styl';
+@import '~css/var.styl'
 
   .header{
     width:100%;

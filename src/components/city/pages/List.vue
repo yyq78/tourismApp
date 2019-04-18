@@ -47,19 +47,20 @@ export default {
   },
   methods: {
     changeSort(sortName){
-      var dom=this.$refs[sortName][0];
+      let dom=this.$refs[sortName][0];
       this.scroll.scrollToElement(dom);
     },
     changeCity(cityName){
       // this.$store.commit('changeCityName',cityName);
       this.changeCityName(cityName);
       this.$router.push('/');
+      
     },
     ...mapMutations(['changeCityName'])
   },
   mounted() {
     let wrapper =this.$refs['container'];
-    this.scroll = new BScroll(wrapper);
+    this.scroll = new BScroll(wrapper,{click:true});//BScroll默认阻止移动端click事件,需要手动配置click参数
   }
 }
 </script>
@@ -67,6 +68,7 @@ export default {
 <style scoped>
   .wrapper{
     position:absolute;
+    z-index:999;
     left:0;
     right:0;
     bottom:.88rem;

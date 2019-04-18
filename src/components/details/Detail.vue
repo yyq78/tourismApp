@@ -13,6 +13,9 @@ export default {
   components:{
     DetailBanner,
     DetailHeader
+  },
+  activated() {
+    (document.documentElement.scrollTop=0 )||(document.body.scrollTop=0);//scrollTop兼容
   }
 }
 </script>
